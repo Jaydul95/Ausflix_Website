@@ -1,0 +1,400 @@
+/* ============================================================
+   COMPREHENSIVE RESPONSIVE CSS FOR AUSFLIX
+   Optimized for: iPhone, iPad, MacBook 13", MacBook 15", iMac 27"
+============================================================ */
+
+/* Root variables for responsive design */
+:root {
+  --mobile-padding: 16px;
+  --tablet-padding: 24px;
+  --desktop-padding: 48px;
+  --max-width-mobile: 100%;
+  --max-width-tablet: 768px;
+  --max-width-laptop: 1280px;
+  --max-width-desktop: 1920px;
+  --max-width-ultra: 2560px;
+}
+
+/* ============================================================
+   BASE MOBILE FIRST APPROACH (320px - 375px)
+   iPhone SE, iPhone 8, iPhone XS
+============================================================ */
+
+@media only screen and (max-width: 375px) {
+  /* Typography */
+  html { font-size: 14px; }
+  body { padding: 0; margin: 0; }
+  h1 { font-size: clamp(24px, 6vw, 32px); line-height: 1.2; }
+  h2 { font-size: clamp(20px, 5vw, 28px); line-height: 1.3; }
+  h3 { font-size: clamp(16px, 4vw, 24px); line-height: 1.4; }
+  p { font-size: 14px; line-height: 1.6; }
+  /* Layout */
+  .container, .wrap, .wrap-sm {
+    padding: 12px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  /* Navigation */
+  .nav-wrap { padding: 0 16px; }
+  .nav-mid { display: none; }
+  .burger { display: flex !important; }
+  .mob-menu { padding: 20px 16px; }
+  /* Hero section */
+  .hero { grid-template-columns: 1fr; }
+  .hero-l { padding: 40px 16px; padding-top: calc(var(--nav-h) + 40px); }
+  .hero-r { display: none; }
+  .hero-bigtitle { font-size: clamp(28px, 7vw, 42px); }
+  .hero-sub { max-width: 100%; font-size: 14px; }
+  .hero-scroll-hint { display: none; }
+  .hero-stats { display: none; }
+  /* Sections */
+  .sec { padding: 40px 0; }
+  .sec-sm { padding: 32px 0; }
+  /* Grid layouts */
+  .about-split { grid-template-columns: 1fr; }
+  .about-split-r { min-height: 300px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .port-grid, .port-grid.pg2 { grid-template-columns: 1fr; }
+  .port-card.featured { grid-column: span 1; grid-row: span 1; }
+  .stats-band-inner { grid-template-columns: 1fr; }
+  .contact-cols { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 20px; }
+  /* Buttons */
+  .btn { padding: 12px 20px; font-size: 12px; min-height: 44px; }
+  .btn-solid, .btn-outline, .btn-red { padding: 12px 20px; }
+  /* Cards */
+  .shop-card { margin-bottom: 16px; }
+  .blog-card { margin-bottom: 16px; }
+  .team-card { flex: 0 0 200px; }
+  /* Forms */
+  .fi, .fs, .ft { padding: 12px 14px; font-size: 14px; }
+  .fl { font-size: 12px; }
+  /* CTA sections */
+  .cta-band { padding: 40px 16px; }
+  .cta-band::before { display: none; }
+  .cta-band-inner { flex-direction: column; gap: 20px; }
+  .cta-band-t { font-size: clamp(20px, 5vw, 28px); }
+  /* Page header */
+  .pg-header { padding: calc(var(--nav-h) + 40px) 0 40px; }
+  .pg-h1 { font-size: clamp(28px, 6vw, 42px); }
+  .pg-header-wrap { flex-direction: column; gap: 20px; }
+  /* Flexbox utilities */
+  .flex-container { flex-direction: column; }
+  /* Spacing utilities */
+  .mb-1 { margin-bottom: 8px; }
+  .mb-2 { margin-bottom: 16px; }
+  .mb-3 { margin-bottom: 24px; }
+  .mt-1 { margin-top: 8px; }
+  .mt-2 { margin-top: 16px; }
+  .mt-3 { margin-top: 24px; }
+}
+
+/* ============================================================
+   SMALL PHONES (376px - 425px)
+   iPhone X, iPhone 11, iPhone 12
+============================================================ */
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  html { font-size: 15px; }
+  h1 { font-size: clamp(26px, 6.5vw, 36px); }
+  h2 { font-size: clamp(22px, 5.5vw, 30px); }
+  .container, .wrap, .wrap-sm { padding: 14px; }
+  .nav-wrap { padding: 0 18px; }
+  .hero-l { padding: 45px 18px; }
+  .hero-bigtitle { font-size: clamp(30px, 7.5vw, 44px); }
+  .sec { padding: 45px 0; }
+  .btn { min-height: 44px; padding: 12px 22px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .port-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   LARGE PHONES (426px - 480px)
+   iPhone 13, iPhone 14, iPhone 15
+============================================================ */
+
+@media only screen and (min-width: 426px) and (max-width: 480px) {
+  html { font-size: 16px; }
+  h1 { font-size: clamp(28px, 7vw, 38px); }
+  h2 { font-size: clamp(24px, 6vw, 32px); }
+  .container, .wrap, .wrap-sm { padding: 16px; }
+  .nav-wrap { padding: 0 20px; }
+  .hero-l { padding: 50px 20px; }
+  .sec { padding: 50px 0; }
+  .about-split-r { min-height: 320px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .port-grid { grid-template-columns: 1fr; }
+  .stats-band-inner { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   SMALL TABLETS (481px - 600px)
+============================================================ */
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  html { font-size: 15px; }
+  .container, .wrap, .wrap-sm { padding: 18px; }
+  .nav-wrap { padding: 0 22px; }
+  .hero-l { padding: 55px 22px; }
+  .sec { padding: 55px 0; }
+  .shop-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .port-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
+  .team-card { flex: 0 0 220px; }
+}
+
+/* ============================================================
+   TABLETS - PORTRAIT (601px - 768px)
+   iPad Mini, iPad Air
+============================================================ */
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  html { font-size: 16px; }
+  .container, .wrap, .wrap-sm {
+    padding: 24px;
+    max-width: 100%;
+  }
+  h1 { font-size: clamp(32px, 7vw, 44px); }
+  h2 { font-size: clamp(28px, 6vw, 36px); }
+  .nav-wrap { padding: 0 24px; }
+  .nav-mid { display: none; }
+  .burger { display: flex !important; }
+  .mob-menu { padding: 32px 24px; }
+  .hero-l { padding: 60px 24px; }
+  .hero-bigtitle { font-size: clamp(36px, 8vw, 48px); }
+  .hero-sub { max-width: 100%; }
+  .sec { padding: 60px 0; }
+  .sec-sm { padding: 48px 0; }
+  .about-split { grid-template-columns: 1fr; }
+  .about-split-r { min-height: 350px; }
+  .about-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .shop-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .port-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+  .port-grid.pg2 { grid-template-columns: repeat(2, 1fr); }
+  .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
+  .contact-cols { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+  .team-card { flex: 0 0 240px; }
+  .cta-band-inner { flex-direction: column; }
+}
+
+/* ============================================================
+   TABLETS - LANDSCAPE (769px - 1024px)
+   iPad Pro 11", iPad Air Landscape
+============================================================ */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  html { font-size: 16px; }
+  .container, .wrap, .wrap-sm {
+    padding: 28px;
+    max-width: 100%;
+  }
+  h1 { font-size: clamp(36px, 7vw, 48px); }
+  h2 { font-size: clamp(32px, 6vw, 40px); }
+  .nav-wrap { padding: 0 28px; }
+  .nav-mid { display: none; }
+  .burger { display: flex !important; }
+  .mob-menu { padding: 40px 28px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-l { padding: 70px 28px; }
+  .hero-bigtitle { font-size: clamp(40px, 8vw, 52px); }
+  .sec { padding: 70px 0; }
+  .about-split { grid-template-columns: 1fr 1fr; }
+  .about-split-r { min-height: 400px; }
+  .about-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .port-grid { grid-template-columns: repeat(3, 1fr); }
+  .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
+  .contact-cols { grid-template-columns: 1fr 1fr; gap: 60px; }
+  .form-row { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .cta-band-inner { flex-direction: row; justify-content: space-between; }
+}
+
+/* ============================================================
+   LAPTOPS - SMALL (1025px - 1280px)
+   MacBook 13", Standard laptops
+============================================================ */
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  html { font-size: 16px; }
+  .container, .wrap, .wrap-sm {
+    padding: 36px;
+    max-width: 1200px;
+  }
+  h1 { font-size: clamp(40px, 6.5vw, 52px); }
+  h2 { font-size: clamp(36px, 5.5vw, 44px); }
+  .nav-wrap { padding: 0 36px; }
+  .nav-mid { display: flex; gap: 28px; }
+  .burger { display: none; }
+  .mob-menu { display: none !important; }
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero-l { padding: 80px 40px; }
+  .hero-r { display: block; }
+  .hero-bigtitle { font-size: clamp(44px, 7.5vw, 56px); }
+  .hero-stats { display: flex; }
+  .sec { padding: 80px 0; }
+  .about-split { grid-template-columns: 1fr 1fr; gap: 60px; }
+  .about-split-r { min-height: 450px; }
+  .about-stats-row { grid-template-columns: repeat(4, 1fr); }
+  .featured-prod { grid-template-columns: 1fr 1fr; }
+  .feat-video { min-height: 350px; }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+  .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid.pg2 { grid-template-columns: repeat(4, 1fr); }
+  .port-card.featured { grid-column: span 2; grid-row: span 2; }
+  .stats-band-inner { grid-template-columns: repeat(4, 1fr); }
+  .contact-cols { grid-template-columns: 1fr 1fr; gap: 80px; }
+  .form-row { grid-template-columns: repeat(2, 1fr); }
+  .ceyflix-inner { grid-template-columns: 1fr 1fr; gap: 60px; }
+  .footer-top { grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 52px; }
+  .cta-band-inner { flex-direction: row; justify-content: space-between; align-items: center; }
+}
+
+/* ============================================================
+   LAPTOPS - MEDIUM (1281px - 1440px)
+   MacBook 15"
+============================================================ */
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  html { font-size: 17px; }
+  .container, .wrap, .wrap-sm {
+    padding: 40px;
+    max-width: 1360px;
+  }
+  h1 { font-size: clamp(44px, 6.5vw, 56px); }
+  h2 { font-size: clamp(40px, 5.5vw, 48px); }
+  .nav-wrap { padding: 0 40px; }
+  .nav-mid { display: flex; gap: 32px; }
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero-l { padding: 90px 48px; }
+  .hero-bigtitle { font-size: clamp(48px, 8vw, 64px); }
+  .sec { padding: 90px 0; }
+  .about-split { grid-template-columns: 1fr 1fr; gap: 80px; }
+  .about-split-r { min-height: 500px; }
+  .about-stats-row { grid-template-columns: repeat(4, 1fr); }
+  .featured-prod { grid-template-columns: 5fr 7fr; }
+  .feat-video { min-height: 400px; }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+  .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid.pg2 { grid-template-columns: repeat(4, 1fr); }
+  .port-card.featured { grid-column: span 2; grid-row: span 2; }
+  .stats-band-inner { grid-template-columns: repeat(4, 1fr); }
+  .contact-cols { grid-template-columns: 4fr 6fr; gap: 80px; }
+  .ceyflix-inner { grid-template-columns: 1fr 1fr; gap: 80px; }
+  .footer-top { grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 52px; }
+}
+
+/* ============================================================
+   DESKTOPS - LARGE (1441px - 1920px)
+   Desktop monitors, large laptops
+============================================================ */
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  html { font-size: 18px; }
+  .container, .wrap, .wrap-sm {
+    padding: 48px;
+    max-width: 1600px;
+  }
+  h1 { font-size: clamp(48px, 6.5vw, 64px); }
+  h2 { font-size: clamp(44px, 5.5vw, 56px); }
+  .nav-wrap { padding: 0 48px; }
+  .nav-mid { display: flex; gap: 36px; }
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero-l { padding: 100px 56px; }
+  .hero-bigtitle { font-size: 7.5rem; }
+  .sec { padding: 100px 0; }
+  .about-split { grid-template-columns: 1fr 1fr; gap: 100px; }
+  .about-split-r { min-height: 550px; }
+  .about-stats-row { grid-template-columns: repeat(4, 1fr); }
+  .featured-prod { grid-template-columns: 5fr 7fr; }
+  .feat-info { padding: 100px 64px; }
+  .feat-video { min-height: 500px; }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+  .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid.pg2 { grid-template-columns: repeat(4, 1fr); }
+  .stats-band-inner { grid-template-columns: repeat(4, 1fr); }
+  .contact-cols { grid-template-columns: 4fr 6fr; gap: 100px; }
+  .ceyflix-inner { grid-template-columns: 1fr 1fr; gap: 100px; }
+  .footer-top { grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 64px; }
+}
+
+/* ============================================================
+   ULTRA WIDE (1921px and above)
+   iMac 27", 4K displays
+============================================================ */
+
+@media only screen and (min-width: 1921px) {
+  html { font-size: 19px; }
+  .container, .wrap, .wrap-sm {
+    padding: 56px;
+    max-width: 1920px;
+  }
+  h1 { font-size: 64px; }
+  h2 { font-size: 56px; }
+  .nav-wrap { padding: 0 56px; }
+  .nav-mid { display: flex; gap: 40px; }
+  .hero { grid-template-columns: 1fr 1fr; }
+  .hero-l { padding: 120px 64px; }
+  .hero-bigtitle { font-size: 8.5rem; }
+  .sec { padding: 120px 0; }
+  .about-split { grid-template-columns: 1fr 1fr; gap: 120px; }
+  .about-split-r { min-height: 600px; }
+  .about-stats-row { grid-template-columns: repeat(4, 1fr); }
+  .featured-prod { grid-template-columns: 5fr 7fr; gap: 0; }
+  .feat-info { padding: 120px 80px; }
+  .feat-video { min-height: 600px; }
+  .shop-grid { grid-template-columns: repeat(4, 1fr); }
+  .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  .port-grid { grid-template-columns: repeat(4, 1fr); }
+  .port-grid.pg2 { grid-template-columns: repeat(5, 1fr); }
+  .stats-band-inner { grid-template-columns: repeat(4, 1fr); }
+  .contact-cols { grid-template-columns: 4fr 6fr; gap: 120px; }
+  .ceyflix-inner { grid-template-columns: 1fr 1fr; gap: 120px; }
+  .footer-top { grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 80px; }
+  .cta-band { padding: 120px 0; }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+============================================================ */
+
+.hidden-mobile { display: none; }
+.hidden-tablet { display: block; }
+.hidden-desktop { display: block; }
+
+@media (min-width: 769px) {
+  .hidden-mobile { display: block; }
+  .hidden-tablet { display: none; }
+}
+
+@media (min-width: 1025px) {
+  .hidden-tablet { display: block; }
+  .hidden-desktop { display: none; }
+}
+
+/* Responsive text utilities */
+.text-mobile { font-size: 14px; }
+.text-tablet { font-size: 16px; }
+.text-desktop { font-size: 18px; }
+
+@media (min-width: 769px) {
+  .text-mobile { font-size: 16px; }
+  .text-tablet { font-size: 18px; }
+}
+
+@media (min-width: 1025px) {
+  .text-mobile { font-size: 18px; }
+  .text-desktop { font-size: 20px; }
+}
