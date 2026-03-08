@@ -1,0 +1,158 @@
+# AusFlix — Australian Media Production House
+
+![AusFlix](https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80)
+
+> A modern, cinematic website for AusFlix — an Australian Digital Media Company producing high-quality content for a global audience.
+
+---
+
+## Live Preview
+
+Hosted via GitHub Pages:
+**[View Live Site](https://yourusername.github.io/ausflix-website/ausflix-website.html)**
+
+> Replace `yourusername` with your actual GitHub username after publishing.
+
+---
+
+## About This Project
+
+This is a fully hand-coded, single-file HTML website built as a design prototype and WordPress development reference for **AusFlix Productions**, based in Adelaide, South Australia.
+
+The design is clean, modern, and cinematic — built around the AusFlix brand identity with charcoal black and signature red (#C8102E) on a warm off-white base.
+
+---
+
+## Pages Included
+
+| Page | Description |
+|---|---|
+| Home | Hero split screen, about teaser, services accordion, stats, portfolio preview, CeyFLiX section, team carousel |
+| About | Company story, timeline, stats band, full team scroll |
+| Services | Full 8-service accordion list, why choose us, CTA |
+| Portfolio | Filterable project grid — Drama, Film, Commercial, Podcast |
+| Rent Gear | Equipment rental shop with working cart drawer |
+| News | Blog/news grid with 6 article cards |
+| Contact | Contact info cards and enquiry form |
+
+---
+
+## Features
+
+- Fully responsive — mobile, tablet, desktop
+- Custom red dot cursor with trailing ring
+- Scroll-triggered reveal animations on all sections
+- Animated stat counters
+- Horizontal team scroll carousel with hover bio reveal
+- Portfolio filter tabs — All / Tele-Drama / Film / Commercial / Podcast
+- Working cart drawer — add items, remove items, running total, checkout confirmation
+- Embedded YouTube video in hero and CeyFLiX sections
+- Services hover accordion with red border slide animation
+- All images from Unsplash — free for commercial use
+
+---
+
+## Tech Stack
+
+```
+HTML5
+CSS3 — Custom Properties, Grid, Flexbox, Animations
+Vanilla JavaScript — No frameworks, no dependencies
+Fonts — Bebas Neue (display) + DM Sans (body) via Google Fonts
+Images — Unsplash CDN (free commercial licence)
+```
+
+---
+
+## Folder Structure
+
+```
+ausflix-website/
+│
+├── ausflix-website.html     # Complete single-file website
+└── README.md                # This file
+```
+
+---
+
+## Brand Colours
+
+| Token | Hex | Usage |
+|---|---|---|
+| Background | `#F3F2EE` | Page base warm off-white |
+| Background 2 | `#ECEAE3` | Section alternate |
+| Ink | `#0A0A0B` | Primary text and dark sections |
+| Red | `#C8102E` | Brand accent, CTAs, highlights |
+| Red Light | `#E8435A` | Hover states |
+| Muted | `#9B9A98` | Secondary text |
+| Rule | `#DEDAD2` | Borders and dividers |
+
+---
+
+## Typography
+
+| Role | Font | Weight |
+|---|---|---|
+| Display / Headings | Bebas Neue | 400 |
+| Body / UI | DM Sans | 300, 400, 500 |
+
+---
+
+## Image Credits
+
+All images sourced from [Unsplash](https://unsplash.com) under the free Unsplash licence. Free for personal and commercial use. No attribution required.
+
+---
+
+## WordPress Development Notes
+
+This file serves as the full design and layout reference for the WordPress build. Each section maps directly to an Elementor or Gutenberg template block.
+
+| Section | WordPress Equivalent |
+|---|---|
+| Navigation | Theme header with WooCommerce cart |
+| Hero | Full-height Elementor section with video background |
+| Services accordion | Elementor accordion or custom ACF repeater |
+| Portfolio grid | Custom Post Type with filter using Isotope or Elementor filters |
+| Shop / Rental | WooCommerce with rental plugin (WooRental or Yith Booking) |
+| Team carousel | Elementor carousel or custom CPT |
+| Contact form | WPForms or Contact Form 7 |
+| Blog | Standard WordPress posts |
+
+---
+
+## Pages to Create in WordPress
+
+```
+Home
+About
+Services
+Portfolio (Custom Post Type)
+Rent Gear (WooCommerce Shop)
+Cart
+News / Blog
+Contact
+Privacy Policy
+Terms & Conditions
+```
+
+---
+
+## Contact
+
+**AusFlix Productions**
+Adelaide, SA, Australia 5070
+Phone: +61 425 202 069
+Email: don@ausflix.com.au
+Stream: [ceyflix.com](https://ceyflix.com)
+
+---
+
+## Licence
+
+This website design and code is proprietary work created for AusFlix Productions.
+All rights reserved © 2026 AusFlix Productions.
+
+---
+
+*Built with precision by a professional web developer. Design reference for WordPress implementation.*
